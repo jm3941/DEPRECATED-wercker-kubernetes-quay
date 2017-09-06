@@ -32,7 +32,7 @@ push-to-registry:
         cmd: ./app
         tag: $WERCKER_GIT_COMMIT
         ports: "5000"
-        repository: quay.io/luhuang/demo
+        repository: quay.io/jm3941/demo
         registry: https://quay.io
 
     
@@ -64,4 +64,4 @@ rolling-update:
         password: $KUBERNETES_PASSWORD
         insecure-skip-tls-verify: true
         command: rolling-update cities
-        image: quay.io/luhuang/demo:$WERCKER_GIT_COMMIT
+        image: quay.io/jm3941/demo:$WERCKER_GIT_COMMIT
